@@ -30,10 +30,8 @@ class _accState extends State<acc> {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('The values cannot be negative')));
       }else{
         acc = (velof - veloi)/time;
-      }
-
-      if(acc<0){
-       return "you've enterd a wrong value";
+      }if(acc<0){
+       return "you've entered a wrong value";
       }else{
         return 'the acceleration is $acc';
       }
@@ -53,38 +51,38 @@ class _accState extends State<acc> {
               result = Facc();
 
             });
-          }, icon: Icon(Icons.calculate))
+          }, icon:const Icon(Icons.calculate))
         ],
       ),
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 10.0,),
+            const SizedBox(height: 10.0,),
             SizedBox(
               width: 300.0,
               child: TextField(
                 controller: _controllertime, decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'enter time if you dont hav it enter 0'
+                  hintText: 'enter time'
               ),),
             ),
-            SizedBox(height: 10.0,),
+            const  SizedBox(height: 10.0,),
             SizedBox(width: 300.0,
               child: TextField(
                 controller: _controllervelof, decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'enter final vilocity if you dont hav it enter 0'
+                  hintText: 'enter final velocity'
               ),),
             ),
-            SizedBox(height: 10.0,),
+            const  SizedBox(height: 10.0,),
             SizedBox(width: 300.0,
               child: TextField(
                 controller: _controllerveloi, decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'enter initial vilocity if you dont hav it enter 0'
+                  hintText: 'enter initial velocity'
               ),),
             ),
-            SizedBox(height: 20.0,),
+            const   SizedBox(height: 20.0,),
         ElevatedButton(onPressed: (){Navigator.of(context).pop();}, child: const Icon(Icons.navigate_before))
 
           ],

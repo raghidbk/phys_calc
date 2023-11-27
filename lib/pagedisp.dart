@@ -27,10 +27,10 @@ class _distanceState extends State<distance> {
 
     if (velo < 0 || time < 0) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('The values cannot be negative')));
-      return 'the value cant be determend ';
+      return 'the value cant be determined ';
     } else{
       disp = velo * time;
-      return 'the dipslasment is $disp the velocity is $velo and the time is $time ';
+      return 'the displacement is $disp';
     }
 
 
@@ -55,24 +55,24 @@ class _distanceState extends State<distance> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 10.0,),
+            const SizedBox(height: 10.0,),
             SizedBox(
               width: 300.0,
               child: TextField(
                 controller: _controllertime, decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'enter time ment is not enter 0'
+                  hintText: 'enter time'
               ),),
             ),
-            SizedBox(height: 10.0,),
+            const  SizedBox(height: 10.0,),
             SizedBox(width: 300.0,
               child: TextField(
                 controller: _controllervelo, decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'enter velocity ment is not enter 0'
+                  hintText: 'enter velocity'
               ),),
             ),
-            SizedBox(height: 20.0,),
+            const   SizedBox(height: 20.0,),
         ElevatedButton(onPressed: (){Navigator.of(context).pop();}, child: const Icon(Icons.navigate_before))
           ],
         ),

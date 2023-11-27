@@ -27,7 +27,7 @@ class _FinalVelocityState extends State<FinalVelocity> {
     double time = double.parse(_controllertime.text.toString());
     double veloi = double.parse(_controllerveloi.text.toString());
     double velof=0;
-    if(velof<0 || veloi<0 || acc<0 || time<0){
+    if(veloi<0 || acc<0 || time<0){
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('The values cannot be negative')));
       return 'the final velocity cant be calculated';
     }else{
@@ -49,13 +49,13 @@ class _FinalVelocityState extends State<FinalVelocity> {
             setState(() {
               result = FVelocity();
             });
-          }, icon: Icon(Icons.calculate))
+          }, icon:const Icon(Icons.calculate))
         ],
       ),
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 15.0,),
+            const  SizedBox(height: 15.0,),
             SizedBox(width: 300.0,
               child: TextField(
                 controller: _controlleracc, decoration: const InputDecoration(
@@ -63,7 +63,7 @@ class _FinalVelocityState extends State<FinalVelocity> {
                   hintText: 'enter acceleration'
               ),),
             ),
-            SizedBox(height: 10.0,),
+            const SizedBox(height: 10.0,),
             SizedBox(
               width: 300.0,
               child: TextField(
@@ -72,7 +72,7 @@ class _FinalVelocityState extends State<FinalVelocity> {
                   hintText: 'enter time'
               ),),
             ),
-            SizedBox(height: 10.0,),
+            const  SizedBox(height: 10.0,),
             SizedBox(width: 300.0,
               child: TextField(
                 controller: _controllerveloi, decoration: const InputDecoration(
@@ -80,7 +80,7 @@ class _FinalVelocityState extends State<FinalVelocity> {
                   hintText: 'enter initial velocity'
               ),),
             ),
-            SizedBox(height: 20.0,),
+            const   SizedBox(height: 20.0,),
             ElevatedButton(onPressed: (){Navigator.of(context).pop();}, child: const Icon(Icons.navigate_before))
           ],
         ),

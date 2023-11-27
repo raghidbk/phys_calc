@@ -1,6 +1,3 @@
-import 'dart:js_interop_unsafe';
-
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class finalPosPage extends StatefulWidget {

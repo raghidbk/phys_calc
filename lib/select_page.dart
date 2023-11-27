@@ -80,17 +80,17 @@ class _pageSState extends State<pageS> {
       body: Center(
         child: Column(
            children: [
-             SizedBox(height: 20.0,),
-             ElevatedButton(onPressed: opendispPage, child: const Text('Dispalcement')),
-             SizedBox(height: 20.0,),
+             const SizedBox(height: 20.0,),
+             ElevatedButton(onPressed: opendispPage, child: const Text('Displacement')),
+             const   SizedBox(height: 20.0,),
              ElevatedButton(onPressed: openaccPage, child: const Text('avg acceleration')),
-             SizedBox(height: 20.0,),
+             const   SizedBox(height: 20.0,),
              ElevatedButton(onPressed: openFinalVelocity, child: const Text('final velocity')),
-             SizedBox(height: 20.0,),
+             const     SizedBox(height: 20.0,),
              ElevatedButton(onPressed: opendistancePage, child:const Text('distance')),
-             SizedBox(height: 20.0,),
-             ElevatedButton(onPressed: openFinalPostionPage, child: const Text('final postion')),
-             SizedBox(height: 20.0,),
+             const SizedBox(height: 20.0,),
+             ElevatedButton(onPressed: openFinalPostionPage, child: const Text('final position')),
+             const   SizedBox(height: 20.0,),
              ElevatedButton(onPressed: openCredits, child: const Text('credits'))
            ],
         ),
